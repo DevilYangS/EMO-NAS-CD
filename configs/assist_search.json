@@ -1,0 +1,9 @@
+{
+  "expt_name": "deafult",
+  "gpu_id": "0",
+
+  "Epoch": 10,
+  "batch_size": 20,
+  "lr": 0.001,
+  "wd": 0.0
+}
