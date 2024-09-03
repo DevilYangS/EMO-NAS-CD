@@ -10,7 +10,15 @@ If this is also the code of [*Designing Novel Cognitive Diagnosis Models via Evo
 
 ## Dependency Install
 To start with, you may install some packages to meet the dependency as 
-
+1. Create your environment by conda
+   ```
+   conda create envname python=3.9
+   ```
+2.  install dependency
+   ```
+pip install -r requirements.txt
+   ```
+**or**
 ```
 pytorch>=1.4.0
 scikit-learn
