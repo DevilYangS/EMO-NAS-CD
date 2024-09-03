@@ -45,7 +45,7 @@ networkx # used for plotting neural architectures
    That will generate the train/validation/test datasets for ASSIST12 under the ratio of 0.6/0.1/0.3.
 
 
-## Directly Using the Found Models by EMO-NSA-CD and Others
+## Directly Use the Found Models by EMO-NSA-CD and Others
 
 ## Usage
 ```
