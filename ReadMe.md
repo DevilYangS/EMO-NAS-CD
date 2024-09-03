@@ -1,14 +1,16 @@
-## Message
 
-This version of code is a bit old. I will update it after finishing AAAI-25 submissions. See you then. 
 
 ## Introduction
-This is the source code of the paper entitled [*Designing Novel Cognitive Diagnosis Models via Evolutionary Multi-Objective Neural Architecture Search*]
+
+This is the source code of the paper entitled [**An Evolutionary Multi-Objective Neural Architecture Search Approach to Advancing Cognitive Diagnosis in Intelligent Education**](https://ieeexplore.ieee.org/abstract/document/10599558/). 
+If this is also the code of [*Designing Novel Cognitive Diagnosis Models via Evolutionary Multi-Objective Neural Architecture Search*] (https://arxiv.org/abs/2307.04429). You can also find the old version at [here](https://github.com/DevilYangS/EMO-NAS-CD/tree/main/Old%20Version).
 
 
 
 
 ## Dependency Install
+To start with, you may install some packages to meet the dependency as 
+
 ```
 pytorch>=1.4.0
 scikit-learn
