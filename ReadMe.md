@@ -14,17 +14,22 @@ To start with, you may install some packages to meet the dependency as
    ```
    conda create envname python=3.9
    ```
-2.  install dependency
+2.  install dependency by
    ```
 pip install -r requirements.txt
    ```
-**or**
+**or** manually install the following packages
 ```
 pytorch>=1.4.0
 scikit-learn
 pandas
 networkx # used for plotting neural architectures
 ```
+
+
+## Prepare Datasets
+- Process your target dataset or Download datasets from [EduData](https://github.com/bigdata-ustc/EduData). This repository provides five datasets, including ASSIST09 (termed assist), SLP, ASSIST12, ASSIST2017, and Junyi. 
+- 
 
 ## Usage
 ```
