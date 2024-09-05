@@ -30,15 +30,15 @@ networkx # used for plotting neural architectures
 
 ## Prepare Datasets
 - Process your target dataset or Download datasets from [EduData](https://github.com/bigdata-ustc/EduData). This repository provides five datasets, including ASSIST09 (termed assist), SLP, ASSIST12, ASSIST2017, and Junyi. 
-- Current dir has contained three datasets: ASSIST09, SLP, and Junyi. Complete datasets can be found at the [release](https://github.com/DevilYangS/EMO-NAS-CD/releases/tag/datasets).
+- The current dir has contained three datasets: ASSIST09, SLP, and Junyi. Complete datasets can be found at the [release](https://github.com/DevilYangS/EMO-NAS-CD/releases/tag/datasets).
 - Then you can run the *divide_data.py* to get the variant datasets under different splitting ratios as
   ```
    divide_data(name='slp',ratio=0.6) # ratio from 0.4 to 0.7
   ```
   That will generate the train/validation/test datasets for SLP under the ratio of 0.6/0.1/0.3.
-  You can generate others by setting ratio to from 0.4 to 0.7 for ASSIST09 and Junyi.
+  You can generate others by setting the ratio from 0.4 to 0.7 for ASSIST09 and Junyi.
 
-- For ASSIST12 and ASSIST17, only the datasets under ratio of 0.7 is needed, but you can also run the *Re_divide_data_for_12_2017.py* to re-divide the dataset as
+- For ASSIST12 and ASSIST17, only the datasets under a ratio of 0.7 are needed, but you can also run the *Re_divide_data_for_12_2017.py* to re-divide the dataset as
   ```
    redivide_data(name='assist12',ratio=0.6) 
   ```
@@ -60,7 +60,7 @@ FrontValue = NDsort.NDSort(fitness, Popsize)[0]
 
 nondominated_index = np.where(FrontValue==0)[0]+1
 ```
-The Pareto front and seven selected models (on two datasets) are  shown as follows
+The Pareto front and seven selected models (on two datasets) are  shown as follows:
 
 <img src='images/ASSIST.png' alt="sym" width="100%"> <img src='images/SLP.png' alt="sym" width="100%">
 
@@ -215,20 +215,20 @@ After that, you can directly  run the `main.py` to train these models and get th
 
 ```
 
-You can   run the `main.py` to train these model as 
+You can   run the `main.py` to train these models as 
 ```
 # Training process
 python main.py
 ```
 
 ## Architecture Search
-To search the models on ***ASSISTments2009* dataset by the proposed EMO-NAS-CD, you can run the following command:
+To search the models on **ASSISTments2009** dataset by the proposed EMO-NAS-CD, you can run the following command:
 ```
 python EvolutionSearch.py --dataset Assistment --exp-name ./experiment/Search
 ```
-Then the search results will be kept at the path of `./experiment/Search/AssistmentSearch_xx-xx-xx_xx-xx-xx`.
+Then, the search results will be kept at the path of `./experiment/Search/AssistmentSearch_xx-xx-xx_xx-xx-xx`.
 
-The searching on the on ***SLP* dataset is similarly as 
+The searching on the on **SLP** dataset is similar as 
 ```
 python EvolutionSearch.py --dataset SLP --exp-name ./experiment/Search
 ```
@@ -239,7 +239,7 @@ You can directly execute these scripts to run these approaches on the datasets y
 
 ## Citation
 
-If you find this work helpful in your research, please use the following BibTex entry to cite our paper.
+If you find this work helpful in your research, please cite our paper using the following BibTex entry.
 
 ```
 @article{yang2024evolutionary,
