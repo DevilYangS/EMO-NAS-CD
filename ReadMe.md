@@ -222,10 +222,43 @@ You can   run the `main.py` to train these model as
 python main.py
 ```
 
-## Usage
+## Architecture Search
+To search the models on ***ASSISTments2009* dataset by the proposed EMO-NAS-CD, you can run the following command:
 ```
-# Search process
-python EvolutionSearch.py
+python EvolutionSearch.py --dataset Assistment --exp-name ./experiment/Search
+```
+Then the search results will be kept at the path of `./experiment/Search/AssistmentSearch_xx-xx-xx_xx-xx-xx`.
 
-# Training process
-python main.py
+The searching on the on ***SLP* dataset is similarly as 
+```
+python EvolutionSearch.py --dataset SLP --exp-name ./experiment/Search
+```
+
+
+In addition, the source codes of *EMO-NAS-CD(flops)*, *AZ*, *MOAZ*, and *Random Search* are also provided as `EvolutionarySearch_FLOPs.py`, `AZSearch.py`, `MOAZ.py`, and `RandomSearch.py`.
+You can directly execute these scripts to run these approaches on the datasets you want.
+
+## Citation
+
+If you find this work helpful in your research, please use the following BibTex entry to cite our paper.
+
+```
+@article{yang2024evolutionary,
+  title={An Evolutionary Multi-Objective Neural Architecture Search Approach to Advancing Cognitive Diagnosis in Intelligent Education},
+  author={Yang, Shangshang and Ma, Haiping and Bi, Ying and Tian, Ye and Zhang, Limiao and Jin, Yaochu and Zhang, Xingyi},
+  journal={IEEE Transactions on Evolutionary Computation},
+  year={2024},
+  publisher={IEEE}
+}
+```
+**and**
+```
+@article{yang2023designing,
+  title={Designing novel cognitive diagnosis models via evolutionary multi-objective neural architecture search},
+  author={Yang, Shangshang and Ma, Haiping and Zhen, Cheng and Tian, Ye and Zhang, Limiao and Jin, Yaochu and Zhang, Xingyi},
+  journal={arXiv preprint arXiv:2307.04429},
+  year={2023}
+}
+```
+The former is the accepted version of the latter. Thanks for your cooperation!!! Sincerely.
+
