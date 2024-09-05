@@ -47,6 +47,38 @@ networkx # used for plotting neural architectures
 
 ## Directly Use the Found Models by EMO-NSA-CD and Others
 
+You can directly use the found models by EMO-NAS-CD on ASSISTments2009 and SLP datasets. Their searching logs can be found at `./experiment/AssistmentSearch_22-07-08_18-11-39/` and `./experiment/slpSearch_22-08-16_23-07-02`, respectively. 
+
+The non-dominated individuals/models can be extracted from  `Gen_99/fitness.txt` and `Gen_99/Population.txt`  as follows:
+```
+from EMO_public import NDsort
+import numpy as np
+
+fitness =np.loadtext(`Gen_99/fitness.txt`)
+Popsize=fitness.shape[0]
+FrontValue = NDsort.NDSort(fitness, Popsize)[0]
+
+nondominated_individuals = np.where(FrontValue==0)[0]+1
+
+```
+The Pareto front and seven selected models (on two datasets) are  shown as follows
+
+<img src='images/ASSIST.png' alt="sym" width="50%"> <img src='images/SLP.png' alt="sym" width="50%">
+
+Here *A1-A7* were found on the  **ASSISTments2009 dataset**, *S1-S7* were found on the  **SLP dataset**. 
+For *A1-A7*, their `nondominated_individuals` is **[2,37,15,25,98,73,82]**, while for *S1-S7*, their `nondominated_individuals` is [3,6,29,18,12,41,57].
+In short, A1_A7= [2,37,15,25,98,73,82], S1_S7=[3,6,29,18,12,41,57]. 
+
+With  the `nondominated_individuals` index, you can extract their decision variables from `Gen_99/Population.txt`.
+
+To convinently save these models, each model is saved with integer encoding. That is, the integer encoding （three-bit for illustrating one node）
+
+Their integer encoding are as follows:
+```
+```
+
+
+
 ## Usage
 ```
 # Search process
