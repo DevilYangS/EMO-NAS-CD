@@ -221,6 +221,19 @@ You can   run the `main.py` to train these models as
 python main.py
 ```
 
+**Moreover**, you can implement a model (such as `A2=[0, 0, 13, 3, 0, 1]` ) to your project by using the `NASCD.py` as
+
+```
+from NASCD import NASCD
+A2=[0, 0, 13, 3, 0, 1]
+NASDEC = A2
+CDmodel = NASCD(knowledge_n, item_n, user_n,dec=NASDEC)
+...
+a standard training pipeline
+...
+...
+```
+
 ## Architecture Search
 To search the models on **ASSISTments2009** dataset by the proposed EMO-NAS-CD, you can run the following command:
 ```
