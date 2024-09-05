@@ -71,10 +71,30 @@ In short, A1_A7= [2,37,15,25,98,73,82], S1_S7=[3,6,29,18,12,41,57].
 
 With  the `nondominated_individuals` index, you can extract their decision variables from `Gen_99/Population.txt`.
 
-To convinently save these models, each model is saved with integer encoding. That is, the integer encoding （three-bit for illustrating one node）
+To save these models conveniently, each model is saved with integer encoding. 
+That is, the integer encoding （three-bit for illustrating one node）, where the first and second bits denote that the node receives which input, and the third bit specifies that the node adopts which operation in ``Models/Operations``.
+For example, [0,1,10] denotes the node takes the *student* and 'exercise' as inputs and uses the `Add` operation.  
 
-Their integer encoding are as follows:
+Their integer encoding is as follows:
 ```
+DECSPACE = []
+# A1-A7
+DECSPACE.append( [0, 1, 10] )
+DECSPACE.append([0, 2, 10, 1, 2, 11, 3, 4, 10] )
+DECSPACE.append([1, 2, 10, 3, 0, 6, 0, 2, 11, 0, 5, 11, 4, 6, 10] )
+DECSPACE.append([0, 1, 10, 0, 2, 10, 3, 4, 11, 5, 0, 13] )
+DECSPACE.append([1, 2, 10, 0, 2, 10, 3, 4, 11, 5, 0, 13, 6, 0, 6] )
+DECSPACE.append([2, 0, 3, 1, 3, 10, 0, 4, 11, 5, 0, 13, 6, 0, 6] )
+DECSPACE.append( [2, 0, 1, 1, 3, 10, 0, 4, 11, 5, 0, 13, 6, 0, 0, 7, 0, 6] )
+
+# S1-S7
+DECSPACE.append([0, 1, 10]  )
+DECSPACE.append(  [0, 1, 10, 3, 0, 7] )
+DECSPACE.append(  [0, 1, 10, 3, 0, 2, 0, 0, 3, 4, 5, 10] )
+DECSPACE.append( [1, 0, 13, 0, 0, 13, 3, 4, 10, 5, 0, 6] )
+DECSPACE.append( [0, 1, 10, 2, 3, 11, 4, 0, 13, 5, 0, 6] )
+DECSPACE.append( [1, 1, 12, 1, 3, 11, 0, 0, 9, 5, 2, 11, 4, 6, 10, 7, 0, 6, 8, 0, 13] )
+DECSPACE.append( [1, 1, 12, 1, 3, 11, 0, 0, 9, 5, 2, 11, 4, 6, 10, 0, 0, 9, 8, 0, 0, 9, 0, 4, 7, 10, 10, 11, 0, 6, 12, 0, 13] )
 ```
 
 
