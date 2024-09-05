@@ -59,11 +59,10 @@ Popsize=fitness.shape[0]
 FrontValue = NDsort.NDSort(fitness, Popsize)[0]
 
 nondominated_individuals = np.where(FrontValue==0)[0]+1
-
 ```
 The Pareto front and seven selected models (on two datasets) are  shown as follows
 
-<img src='images/ASSIST.png' alt="sym" width="50%"> <img src='images/SLP.png' alt="sym" width="50%">
+<img src='images/ASSIST.png' alt="sym" width="100%"> <img src='images/SLP.png' alt="sym" width="100%">
 
 Here *A1-A7* were found on the  **ASSISTments2009 dataset**, *S1-S7* were found on the  **SLP dataset**. 
 For *A1-A7*, their `nondominated_individuals` is **[2,37,15,25,98,73,82]**, while for *S1-S7*, their `nondominated_individuals` is [3,6,29,18,12,41,57].
