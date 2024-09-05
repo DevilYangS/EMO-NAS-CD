@@ -58,23 +58,23 @@ fitness =np.loadtext(`Gen_99/fitness.txt`)
 Popsize=fitness.shape[0]
 FrontValue = NDsort.NDSort(fitness, Popsize)[0]
 
-nondominated_individuals = np.where(FrontValue==0)[0]+1
+nondominated_index = np.where(FrontValue==0)[0]+1
 ```
 The Pareto front and seven selected models (on two datasets) are  shown as follows
 
 <img src='images/ASSIST.png' alt="sym" width="100%"> <img src='images/SLP.png' alt="sym" width="100%">
 
 Here *A1-A7* were found on the  **ASSISTments2009 dataset**, *S1-S7* were found on the  **SLP dataset**. 
-For *A1-A7*, their `nondominated_individuals` is **[2,37,15,25,98,73,82]**, while for *S1-S7*, their `nondominated_individuals` is [3,6,29,18,12,41,57].
+For *A1-A7*, their `nondominated_index` is **[2,37,15,25,98,73,82]**, while for *S1-S7*, their `nondominated_index` is [3,6,29,18,12,41,57].
 In short, A1_A7= [2,37,15,25,98,73,82], S1_S7=[3,6,29,18,12,41,57]. 
 
 With  the `nondominated_individuals` index, you can extract their decision variables from `Gen_99/Population.txt`.
 
 To save these models conveniently, each model is saved with integer encoding. 
-That is, the integer encoding （three-bit for illustrating one node）, where the first and second bits denote that the node receives which input, and the third bit specifies that the node adopts which operation in ``Models/Operations``.
-For example, [0,1,10] denotes the node takes the *student* and 'exercise' as inputs and uses the `Add` operation.  
+That is, the integer encoding* （**three-bit for illustrating one node）**： the first and second bits denote which input the node receives, and the third bit specifies which operation it adopts in ``Models/Operations``.
+For example, [0,1,10] denotes the node takes the *student* and 'exercise' as inputs and uses the `Add` operation.  For more details, please see Section IV-B of [our paper](https://www.researchgate.net/profile/Shangshang-Yang-4/publication/382275807_An_Evolutionary_Multi-Objective_Neural_Architecture_Search_Approach_to_Advancing_Cognitive_Diagnosis_in_Intelligent_Education/links/66976368cb7fbf12a45779f8/An-Evolutionary-Multi-Objective-Neural-Architecture-Search-Approach-to-Advancing-Cognitive-Diagnosis-in-Intelligent-Education.pdf).
 
-Their integer encoding is as follows:
+As a result, their integer encoding is as follows:
 ```
 DECSPACE = []
 # A1-A7
