@@ -97,6 +97,26 @@ DECSPACE.append( [1, 1, 12, 1, 3, 11, 0, 0, 9, 5, 2, 11, 4, 6, 10, 7, 0, 6, 8, 0
 DECSPACE.append( [1, 1, 12, 1, 3, 11, 0, 0, 9, 5, 2, 11, 4, 6, 10, 0, 0, 9, 8, 0, 0, 9, 0, 4, 7, 10, 10, 11, 0, 6, 12, 0, 13] )
 ```
 
+With their encodings, you can visualize their architectures by creating and running the following script:
+```
+   from EvolutionSearch import Individual as Individual
+   from genotypes import Genotype_mapping
+    I1 = Individual(Dec=[1, 1, 12, 1, 3, 11, 0, 0, 9, 5, 2, 11, 4, 6, 10, 7, 0, 6, 8, 0, 13]  ,mapping=Genotype_mapping )
+    I1.visualization()
+```
+Then you can get the following plotting.
+![image](https://github.com/user-attachments/assets/f051fd12-50c5-4f87-a687-1bd67c06b182)
+
+**Or** You can use the `Models/Plotting.py` to plot the architecture  as
+```
+   from Models.Plotting import Individual
+   from genotypes import Genotype_mapping
+   I1 = Individual(Dec=[2, 0, 1, 1, 3, 10, 0, 4, 11, 5, 0, 13, 6, 0, 0, 7, 0, 6]  ,mapping=Genotype_mapping )
+   I1.visualization()
+```
+Then you can get the following plotting.
+
+
 
 
 ## Usage
