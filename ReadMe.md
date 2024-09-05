@@ -117,7 +117,7 @@ Then you can get the following plotting.
 Then you can get the following plotting.
 <img src='images/A7.png' alt="sym" width="100%">
 
-After that, you can directly  run the `main.py` to train these models to get their results.
+After that, you can directly  run the `main.py` to train these models and get their results.
 
 **Note that** `main.py` has contained the models of *A1-A7* and *S1-S7*, where the models of *fA1-fA7* and *fS1-fS7* found by EMO-NSA-CD(flops) i.e., `EvolutionarySearch_FLOPs.py` are also included. Besides, the models found by AZ, MOAZ, and *RandomSearch* are also included as follows:
 ```
@@ -216,7 +216,11 @@ After that, you can directly  run the `main.py` to train these models to get the
 
 ```
 
-
+You can   run the `main.py` to train these model as 
+```
+# Training process
+python main.py
+```
 
 ## Usage
 ```
