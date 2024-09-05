@@ -47,7 +47,7 @@ networkx # used for plotting neural architectures
 
 ## Directly Use the Found Models by EMO-NSA-CD and Others
 
-You can directly use the found models by EMO-NAS-CD on ASSISTments2009 and SLP datasets. Their searching logs can be found at `./experiment/AssistmentSearch_22-07-08_18-11-39/` and `./experiment/slpSearch_22-08-16_23-07-02`, respectively. 
+You can directly use the found models by EMO-NAS-CD on ASSISTments2009 and SLP datasets. Their searching logs can be found at `./experiment/Search/AssistmentSearch_22-07-08_18-11-39/` and `./experiment/Search/slpSearch_22-08-16_23-07-02`, respectively. 
 
 The non-dominated individuals/models can be extracted from  `Gen_99/fitness.txt` and `Gen_99/Population.txt`  as follows:
 ```
