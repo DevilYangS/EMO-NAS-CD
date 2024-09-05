@@ -217,11 +217,11 @@ def transform(user, item, item2knowledge, score, batch_size):
 batch_size = 128
 
 # testing on four datasets, where assist12 and assist2017 were on the ratio of 8:2
-# for names in ['SLP','ASSIST']: # list_ratio = [0.5,0.6,0.7,0.8]
+# for names in ['slp','ASSIST']: # list_ratio = [0.5,0.6,0.7,0.8]
 # for names in ['assist2017','assist12']: # ratio = 0.8
 
 
-for names in ['SLP','ASSIST','assist12','assist2017']:
+for names in ['slp','ASSIST','assist12','assist2017']:
 
     list_ratio = [0.5,0.6,0.7,0.8]
 #     list_ratio = [0.8]
