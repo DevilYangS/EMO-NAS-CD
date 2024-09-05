@@ -103,7 +103,7 @@ With their encodings, you can visualize their architectures by creating and runn
     I1 = Individual(Dec=[1, 1, 12, 1, 3, 11, 0, 0, 9, 5, 2, 11, 4, 6, 10, 7, 0, 6, 8, 0, 13]  ,mapping=Genotype_mapping )
     I1.visualization()
 ```
-Then you can get the following plotting.
+Then you can get the following plotting (it is the architecture of *S7*).
 ![image](https://github.com/user-attachments/assets/f051fd12-50c5-4f87-a687-1bd67c06b182)
 
 **Or** You can use the `Models/Plotting.py` to plot the architecture  as
@@ -113,7 +113,7 @@ Then you can get the following plotting.
    I1 = Individual(Dec=[2, 0, 1, 1, 3, 10, 0, 4, 11, 5, 0, 13, 6, 0, 0, 7, 0, 6]  ,mapping=Genotype_mapping )
    I1.visualization()
 ```
-Then you can get the following plotting.
+Then you can get the following plotting (it is the architecture of *A7*).
 <img src='images/A7.png' alt="sym" width="100%">
 
 After that, you can directly  run the `main.py` to train these models and get their results.
